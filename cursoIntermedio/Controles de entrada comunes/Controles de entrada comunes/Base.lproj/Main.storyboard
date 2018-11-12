@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Controles_de_entrada_comunes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-Rd-H3Q">
+                                <rect key="frame" x="0.0" y="424" width="824" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZo-2i-9Uk">
+                                        <rect key="frame" x="20" y="20" width="784" height="60"/>
+                                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="adc-lC-q0y"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HZo-2i-9Uk" firstAttribute="centerX" secondItem="8hN-Rd-H3Q" secondAttribute="centerX" id="TSp-US-8mQ"/>
+                                    <constraint firstItem="HZo-2i-9Uk" firstAttribute="centerY" secondItem="8hN-Rd-H3Q" secondAttribute="centerY" id="fho-E4-CIi"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exg-L9-wC2">
+                                <rect key="frame" x="-20" y="0.0" width="874" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qqz-Dy-83n">
+                                        <rect key="frame" x="330" y="20" width="194" height="145"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pVg-F4-OVq">
+                                                <rect key="frame" x="0.0" y="0.0" width="194" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="TeclaReturnPresionada:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="4lu-gl-mCL"/>
+                                                    <action selector="cambiarTexto:" destination="BYZ-38-t0r" eventType="editingChanged" id="Uq6-98-5sW"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tER-4C-5um">
+                                                <rect key="frame" x="37" y="38" width="120" height="30"/>
+                                                <state key="normal" title="Imprimir texto 🤓">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="botonPushado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I9R-UT-OpB"/>
+                                                </connections>
+                                            </button>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72T-R4-Zh5">
+                                                <rect key="frame" x="72.5" y="76" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="AlternarSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="j3p-b1-6Zt"/>
+                                                </connections>
+                                            </switch>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="s26-gp-RUu">
+                                                <rect key="frame" x="-2" y="115" width="198" height="31"/>
+                                                <connections>
+                                                    <action selector="ValorDelSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="gcP-YD-b5M"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pVg-F4-OVq" secondAttribute="trailing" id="7Ge-VJ-2ZS"/>
+                                            <constraint firstItem="pVg-F4-OVq" firstAttribute="leading" secondItem="Qqz-Dy-83n" secondAttribute="leading" id="otd-JO-Vb6"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VBF-fr-8LV" appends="YES" id="0be-rC-pWl"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="alternar" destination="72T-R4-Zh5" id="5PW-iB-K3X"/>
+                        <outlet property="slider" destination="s26-gp-RUu" id="aLk-gf-iAt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VBF-fr-8LV">
+                    <connections>
+                        <action selector="responderAlTap:" destination="BYZ-38-t0r" id="CT3-3w-1t8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-79.856115107913681" y="133.27338129496403"/>
+        </scene>
+    </scenes>
+</document>
