@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -320,10 +320,19 @@
                         <viewLayoutGuide key="safeArea" id="LrI-ur-NjO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="dY6-W2-P5Z">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="haV-hf-d23"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="haV-hf-d23">
+                            <connections>
+                                <segue destination="yhb-Cb-J5y" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="6Wa-CW-wft"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="RcW-00-Zn7" id="K1T-A9-ieC"/>
+                        <outlet property="resultDefinitionLabel" destination="Ths-fl-V5h" id="4T0-A1-hrX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sew-Fd-7Uw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yhb-Cb-J5y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2333.5999999999999" y="133.5832083958021"/>
         </scene>
